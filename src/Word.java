@@ -4,7 +4,7 @@ public class Word {
 	private String phrase;
 	private ArrayList<Character> letters = new ArrayList<>();
 	
-	public Word(String words){
+	public void newWord(String words){
 		this.phrase = words;
 	}
 	
@@ -28,5 +28,13 @@ public class Word {
 	
 	public void guess(char letter){
 		this.letters.add(letter);
+	}
+	
+	public boolean isComplete(){
+		if(this.display().contains("_")){
+			return false;
+		} else {
+			return true;
+		}
 	}
 }
