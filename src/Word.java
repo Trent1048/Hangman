@@ -9,13 +9,18 @@ public class Word {
 	}
 	
 	public String display(){
-		String words = this.phrase;
-		for(int ch = 0; ch < this.letters.size(); ch++){
-			if(words.indexOf(ch) == -1){
-				
+		Character[] words = new Character[this.phrase.length()];
+		for(int ch = 0; ch < words.length; ch++){
+			if(this.phrase.charAt(ch) != ' '){
+				words[ch] = '_';
+			} else {
+				words[ch] = ' ';
+			}
+			if(letters.contains(this.phrase.charAt(ch))){
+				words[ch] = this.phrase.charAt(ch);
 			}
 		}
-		return words;
+		return Arrays.toString(words);
 	}
 	
 	public void guess(char letter){
