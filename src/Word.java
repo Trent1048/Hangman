@@ -20,7 +20,10 @@ public class Word {
 				words[ch] = this.phrase.charAt(ch);
 			}
 		}
-		return Arrays.toString(words);
+		String displayWords =  Arrays.toString(words);
+		displayWords = displayWords.replace("[","");
+		displayWords = displayWords.replace("]","");
+		return displayWords.replace(",","");
 	}
 	
 	public void guess(char letter){
