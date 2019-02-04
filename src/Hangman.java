@@ -7,9 +7,9 @@ public class Hangman {
 		boolean playAgain = true;
 		boolean playing = true;
 		Word Game = new Word();
-		System.out.print("Welcome to Hamgman ");
+		System.out.print("Welcome to Hamgman \n");
 		while(playAgain){
-			System.out.print("please input the word or phrase: ");
+			System.out.print("\nplease input the word or phrase: ");
 			String wordyPhrase = console.nextLine().toLowerCase();
 			Game.newWord(wordyPhrase);
 			for(int times = 0; times < 100; times++){
@@ -26,7 +26,7 @@ public class Hangman {
 				}
 				playing = !Game.isComplete();
 			}
-			System.out.print("\nThe word/phrase was: \"" + wordyPhrase + "\" \n \nDo you want to play again? ");
+			System.out.print("\nThe word or phrase was \"" + wordyPhrase + "\" \n \nDo you want to play again? ");
 			if(console.nextLine().equalsIgnoreCase("no")){
 				playAgain = false;
 			} else {
