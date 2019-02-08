@@ -14,7 +14,7 @@ public class Hangman {
 			Word Game = new Word();
 			System.out.print("Welcome to Hamgman \n");
 			System.out.print("Do you have a friend to play with? ");
-			if(console.nextLine().equals("no")){
+			if(console.nextLine().equalsIgnoreCase("no")){
 				playingAlone = true;
 			}
 			while(playAgain && document.hasNextLine()){
